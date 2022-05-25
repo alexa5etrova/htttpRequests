@@ -100,3 +100,21 @@ form {
 .response-container span {
   font-weight: 400;
 }
+
+.postItem {
+  border: 1px solid #e5e5e5;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.postTitle {
+  font-size: 18px;
+  color: blue;
+  text-transform: capitalize;
+}
+.postBody {
+  font-size: 14px;
+  color: black;
+  font-style: italic;
+}

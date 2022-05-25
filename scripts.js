@@ -17,3 +17,18 @@ loadBtn.addEventListener("click", function (evt) {
           </div>`)
     );
 });
+const postsBtn = document.querySelector("#postRequests");
+const postsContainer = document.querySelector("#postResults");
+
+postsBtn.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  axios
+    .get("https://jsonplaceholder.typicode.com/posts")
+    .then(function (response) {
+      let postsData = response.data.map(
+        (item) =>
+          `<div class="postItem"><p class="postTitle">${item.title}</p><p class="postBody">${item.body}</p></div>`
+      );
+      postsContainer.innerHTML = postsData.join("");
+    });
+});
